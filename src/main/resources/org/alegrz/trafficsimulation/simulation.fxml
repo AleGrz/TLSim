@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane minHeight="600" minWidth="600" stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane">
+    <left>
+        <StackPane fx:id="container" >
+            <ImageView preserveRatio="true" fx:id="bg">
+                <Image url="@ui/intersection.png" />
+            </ImageView>
+        </StackPane>
+    </left>
+    <right>
+        <GridPane prefWidth="240" vgap="10" alignment="CENTER" prefHeight="Infinity" styleClass="bg">
+            <Label text="Simulation" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="title"/>
+            <Label text="Simulation step speed" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Slider fx:id="speedSlider" min="0.05" max="5" value="1" GridPane.rowIndex="2" GridPane.columnIndex="0" prefWidth="200"
+                    cache="true"
+                    majorTickUnit="0.05"
+                    minorTickCount="0"
+                    snapToTicks="true"/>
+            <Label fx:id="speedLabel" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Button fx:id="startButton" text="Start" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#startSimulation"
+                    GridPane.columnSpan="2" />
+        </GridPane>
+    </right>
+</BorderPane>
