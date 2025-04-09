@@ -85,7 +85,7 @@ mvn package
 ```
 
 ```bash
-java -jar target/tlsim-1.0.jar <input_file> <output_file> <input_file> <output_file> <intersection_type> <controller> <mode>
+java -jar target/tlsim-1.0.jar <input_file> <output_file> <intersection_type> <controller> <mode>
 ```
 
 - input_file: JSON file with the input commands
